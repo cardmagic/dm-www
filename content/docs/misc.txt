@@ -80,6 +80,7 @@ To use one context rather than another, simply wrap your code block inside a @da
 <% coderay(:lang => "ruby", :line_numbers => "inline") do -%>
 database(:external) { Person.first }
 # hits up your :external database and retrieves the first Person
+# note: DM 0.3.0 has a bug where this does not retrieve the entire record from the db, only the primary key
 <% end %>
 
 This will use your connection to the @:external@ database and the first Person it finds.  Later, when you call @.save@ on that person, it'll get saved back to the @:external@ database; An object is aware of what context it came from and should be saved back to.
