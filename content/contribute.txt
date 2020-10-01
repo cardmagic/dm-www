@@ -4,6 +4,8 @@ created_at: Wed Aug 29 20:37:00 +0930 2007
 filter:
   - erb
   - textile
+  - name
+  
 --- 
 h1. <%= @page.title %>
 
